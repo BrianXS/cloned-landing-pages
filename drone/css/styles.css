@@ -1,0 +1,98 @@
+/*==============================
+Author: Brian Jerez
+Github: BrianXS
+Original url: https://drone.io/
+
+Table of contents
+
++ Shared elements
++ Introduction | #introduction
+  - NavBar
+  - Feature
+  - Customers
++ First feature | #first-feature
++ Sub features | #sub-features
++ Language especific implementations | #implementations
++ Second feature | #second-feature
++ Third feature | #third-feature
++ Customer quote
++ Footer
++ Media Queries
+===============================*/
+
+/*==============================
+Shared Components
+===============================*/
+
+:root {
+    --black: #1e375a;
+    --dark-blue: #354d6e;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+}
+ 
+.container {
+    max-width: 100%;
+    width: 88%;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: 11px 30px;
+    font-weight: 700;
+    border-radius: 6px;
+    background: lightskyblue;
+}
+
+
+/*==============================
++[Introduction | #introduction]
+===============================*/
+
+#introduction {
+    padding-top: 35px;
+}
+
+/*==============================
+- NavBar
+===============================*/
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+nav #logo {
+    font-weight: 700;
+    font-size: 17.5px;
+    letter-spacing: 2px;
+    color: var(--black);
+}
+
+nav #logo img {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 9px;
+}
+
+nav div {
+    padding-top: 5px;
+}
+
+nav div a {
+    margin: 20px;
+}
+
+nav a:last-child {
+    margin-top: -4px;
+}
