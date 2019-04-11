@@ -26,24 +26,69 @@ Shared Components
 
 :root {
     --black: #1e375a;
+    --gray: #60748b;
+    --blue: #2364d2;
     --dark-blue: #354d6e;
+    --dark-sky-blue: #d1e3f6;
+    --light-sky-blue: #e9f2fa;
 }
 
 body {
     font-family: 'Kanit', sans-serif;
+    color: var(--gray)
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--black);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
 }
  
 .container {
-    max-width: 100%;
+    max-width: 1200px;
     width: 88%;
     margin: 0 auto;
+}
+
+.bg-blue {
+    background: #2364d2;
+}
+
+.bg-white {
+    background: #ffffff;
 }
 
 .btn {
     padding: 11px 30px;
     font-weight: 700;
     border-radius: 6px;
-    background: lightskyblue;
+    text-transform: uppercase
+}
+
+.btn-md {
+    padding: 18px 30px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-xl {
+    padding: 11px 30px;
+    font-weight: 700;
+    border-radius: 6px;
+    text-transform: uppercase
 }
 
 
@@ -95,4 +140,23 @@ nav div a {
 
 nav a:last-child {
     margin-top: -4px;
+}
+
+/*==============================
+- Feature
+===============================*/
+
+#intro-feature div{
+    width: 50%;
+}
+
+#intro-feature div p{
+    font-size: 24px;
+    max-width: 79%;
+    line-height: 45px;
+    margin-bottom: 50px;
+}
+
+#intro-feature div:first-child a {
+    color: white;
 }
