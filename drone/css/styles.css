@@ -10,11 +10,9 @@ Table of contents
   - NavBar
   - Feature
   - Customers
-+ First feature | #first-feature
++ feature | #first-feature
 + Sub features | #sub-features
 + Language especific implementations | #implementations
-+ Second feature | #second-feature
-+ Third feature | #third-feature
 + Customer quote
 + Footer
 + Media Queries
@@ -35,7 +33,7 @@ Shared Components
 
 body {
     font-family: 'Kanit', sans-serif;
-    color: var(--gray)
+    color: var(--gray);
 }
 
 a {
@@ -59,6 +57,7 @@ p {
     max-width: 1200px;
     width: 88%;
     margin: 0 auto;
+    display: flow-root;
 }
 
 .bg-blue {
@@ -77,7 +76,7 @@ p {
 }
 
 .btn-md {
-    padding: 18px 30px;
+    padding: 22px 30px;
     font-weight: 700;
     border-radius: 6px;
     text-transform: uppercase;
@@ -91,21 +90,20 @@ p {
     text-transform: uppercase
 }
 
-
 /*==============================
 +[Introduction | #introduction]
 ===============================*/
 
 #introduction {
     padding-top: 35px;
+    background: linear-gradient(to left, var(--dark-sky-blue), 10%, var(--light-sky-blue));
 }
 
-/*==============================
-- NavBar
-===============================*/
+/*=====NavBar=====*/
 nav {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 110px;
 }
 
 nav a {
@@ -142,21 +140,83 @@ nav a:last-child {
     margin-top: -4px;
 }
 
-/*==============================
-- Feature
-===============================*/
+/*=====Feature=====*/
+
+#intro-feature {
+    display: flow-root;
+}
 
 #intro-feature div{
     width: 50%;
+    float: left;
 }
 
 #intro-feature div p{
     font-size: 24px;
     max-width: 79%;
-    line-height: 45px;
-    margin-bottom: 50px;
+    line-height: 40px;
+    margin-bottom: 30px;
 }
 
 #intro-feature div:first-child a {
     color: white;
+    display: inline-block;
+}
+
+#intro-feature div:first-child a:last-child {
+    color: var(--black);
+}
+
+#intro-feature div:last-child img {
+    width: 100%;
+}
+
+/*=====Customers=====*/
+
+#customers {
+    display: flow-root;
+}
+
+#customers ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#customers ul li{
+    display: inline-block;
+    margin: 0 20px 0px 20px;
+}
+
+#customers ul li img{
+    width: 100%;
+}
+
+/*==============================
++[Sub features | #sub-features]
+===============================*/
+
+.sub-features {
+    padding: 185px 0 185px 0;
+}
+
+.sub-features .sub-feature-item {
+    display: inline-block;
+    float: left;
+    width: 33.33%;
+}
+
+.sub-features .sub-feature-item object {
+    width: 100px;
+    margin-bottom: 5px;
+}
+
+.sub-features .sub-feature-item h3 {
+    font-size: 23px;
+}
+
+.sub-features .sub-feature-item p {
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 29px;
 }
