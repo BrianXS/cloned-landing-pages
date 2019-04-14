@@ -10,7 +10,7 @@ Table of contents
   - NavBar
   - Feature
   - Customers
-+ feature | #first-feature
++ feature | #feature
 + Sub features | #sub-features
 + Language especific implementations | #implementations
 + Customer quote
@@ -49,8 +49,20 @@ h1 {
     font-size: 48px;
 }
 
+h2 {
+    font-size: 36px;
+}
+
 p {
     font-family: 'Ubuntu', sans-serif;
+}
+
+pre > code {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 25px !important;
+    border-radius: 10px;
+    background: #1d375a !important;
 }
  
 .container {
@@ -58,6 +70,7 @@ p {
     width: 88%;
     margin: 0 auto;
     display: flow-root;
+    padding-top: 185px;
 }
 
 .bg-blue {
@@ -68,11 +81,19 @@ p {
     background: #ffffff;
 }
 
+.color-white { 
+    color: white 
+}
+
+.color-black { 
+    color: var(--black)
+}
+
 .btn {
     padding: 11px 30px;
     font-weight: 700;
     border-radius: 6px;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 .btn-md {
@@ -84,10 +105,23 @@ p {
 }
 
 .btn-xl {
-    padding: 11px 30px;
+    padding: 20px 37px;
     font-weight: 700;
     border-radius: 6px;
-    text-transform: uppercase
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.center-text {
+    text-align: center;
 }
 
 /*==============================
@@ -96,7 +130,11 @@ p {
 
 #introduction {
     padding-top: 35px;
-    background: linear-gradient(to left, var(--dark-sky-blue), 10%, var(--light-sky-blue));
+    background-image: url("../img/introduction-bg.svg")
+}
+
+#introduction .container {
+    padding-top: 0px;
 }
 
 /*=====NavBar=====*/
@@ -192,13 +230,63 @@ nav a:last-child {
     width: 100%;
 }
 
+
 /*==============================
-+[Sub features | #sub-features]
++[Features | .feature]
 ===============================*/
 
-.sub-features {
-    padding: 185px 0 185px 0;
+.feature {
+    display: flow-root;
 }
+
+.feature .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item {
+    float: left;
+    width: 50%;
+}
+
+.container .feature-item:first-child h2 {
+    max-width: 500px;
+    line-height: 50px;
+}
+
+.container .feature-item:first-child p {
+    max-width: 550px;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.container .feature-item:last-child p {
+    max-width: 450px;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.feature-item img {
+    width: 80%;
+}
+
+.feature-item a {
+    font-size: 20px;
+    display: inline-block;
+}
+
+.feature-item .hljs-attr {
+    color: white !important;
+}
+
+.feature-item .hljs-string, .hljs-number {
+    color: #ed5267 !important;
+}
+
+/*==============================
++[Sub features | .sub-features]
+===============================*/
 
 .sub-features .sub-feature-item {
     display: inline-block;

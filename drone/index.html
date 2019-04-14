@@ -4,6 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Drone CI - Automated software testing and delivery</title>
 
+        <link rel="icon" href="./img/favicon.png">
+
         <!--Fonts-->
         <link href="https://fonts.googleapis.com/css?family=Kanit:400,500,600,700" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -11,6 +13,17 @@
         <!--CSS-->
         <link href="./css/normalize.css" rel="stylesheet">
         <link href="./css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/nord.min.css">
+
+        <!--JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/yaml.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.6.0/dist/highlightjs-line-numbers.min.js"></script>
+
+        <script>
+            hljs.initHighlightingOnLoad();
+            hljs.initLineNumbersOnLoad();
+        </script>
     </head>
     <body>
         <div id="introduction">
@@ -60,10 +73,45 @@
                 <!--customers ends-->
             </div>
         </div>
+        <div class="feature">
+            <div class="container">
+                <div class="feature-item">
+                    <h2>Configuration as a code</h2>
+                    <p>
+                            Pipelines are configured with a simple, 
+                            easy‑to‑read file that you commit to your git repository.
+                    </p>
+                    <p>
+                            Each Pipeline step is executed inside an isolated Docker container 
+                            that is automatically downloaded at runtime.
+                                                        
+                    </p>
+                    <a class="color-white bg-blue btn-md" href="#">get started</a>
+                </div>
+                <div class="feature-item">
+                        <pre>
+                            <code class="yaml">
+    kind: pipeline
+    steps:
+    - name: test
+    image: node
+    commands:
+    - npm install
+    - npm test
+    services:
+    - name: database
+    image: mysql
+    ports:
+    - 3306
+                            </code>
+                        </pre>
+                </div>
+            </div>
+        </div>
         <div class="sub-features">
             <div class="container">
                 <div class="sub-feature-item">
-                    <object data="./img/feature-1.svg" type="image/svg+xml"></object>
+                    <object data="./img/sub-feature-1.svg" type="image/svg+xml"></object>
                     <h3>Any Source Code Manager</h3>
                     <p>
                         Drone integrates seamlessly with multiple 
@@ -73,7 +121,7 @@
                     </p>
                 </div>
                 <div class="sub-feature-item">
-                    <object data="./img/feature-2.svg" type="image/svg+xml"></object>
+                    <object data="./img/sub-feature-2.svg" type="image/svg+xml"></object>
                     <h3>Any Platform</h3>
                     <p>
                         Drone natively supports multiple operating systems and architectures, 
@@ -81,7 +129,7 @@
                     </p>
                 </div>
                 <div class="sub-feature-item">
-                    <object data="./img/feature-3.svg" type="image/svg+xml"></object>
+                    <object data="./img/sub-feature-3.svg" type="image/svg+xml"></object>
                     <h3>Any Language</h3>
                     <p>
                         Don’t waste time configuring your build servers. 
@@ -91,36 +139,67 @@
                 </div>
             </div>
         </div>
-        <div class="sub-features">
-                <div class="container">
-                    <div class="sub-feature-item">
-                        <object data="./img/feature-1.svg" type="image/svg+xml"></object>
-                        <h3>Any Source Code Manager</h3>
-                        <p>
-                            Drone integrates seamlessly with multiple 
-                            source code management systems, 
-                            including GitHub, GitHubEnterprise, 
-                            Bitbucket, and GitLab.
-                        </p>
-                    </div>
-                    <div class="sub-feature-item">
-                        <object data="./img/feature-2.svg" type="image/svg+xml"></object>
-                        <h3>Any Platform</h3>
-                        <p>
-                            Drone natively supports multiple operating systems and architectures, 
-                            including Linux x64, ARM, ARM64 and Windows x64.
-                        </p>
-                    </div>
-                    <div class="sub-feature-item">
-                        <object data="./img/feature-3.svg" type="image/svg+xml"></object>
-                        <h3>Any Language</h3>
-                        <p>
-                            Don’t waste time configuring your build servers. 
-                            Choose from thousands of Docker images and Drone 
-                            will auto-provision your environment.
-                        </p>
-                    </div>
+        <div class="feature">
+            <div class="container">
+                <div class="feature-item">
+                    <h2>Customization When You Need It</h2>
+                    <p>
+                        Drone makes advanced customization easy. 
+                        Implement custom access controls, approval workflows, 
+                        secret management, yaml syntax extensions and more.
+                    </p>
                 </div>
+                <div class="feature-item center-text">
+                    <img src="./img/feature-2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="sub-features">
+            <div class="container">
+                <div class="sub-feature-item">
+                    <object data="./img/sub-feature-4.svg" type="image/svg+xml"></object>
+                    <h3>Any Source Code Manager</h3>
+                    <p>
+                        Drone integrates seamlessly with multiple 
+                        source code management systems, 
+                        including GitHub, GitHubEnterprise, 
+                        Bitbucket, and GitLab.
+                    </p>
+                </div>
+                <div class="sub-feature-item">
+                    <object data="./img/sub-feature-5.svg" type="image/svg+xml"></object>
+                    <h3>Any Platform</h3>
+                    <p>
+                        Drone natively supports multiple operating systems and architectures, 
+                        including Linux x64, ARM, ARM64 and Windows x64.
+                    </p>
+                </div>
+                <div class="sub-feature-item">
+                    <object data="./img/sub-feature-6.svg" type="image/svg+xml"></object>
+                    <h3>Any Language</h3>
+                    <p>
+                        Don’t waste time configuring your build servers. 
+                        Choose from thousands of Docker images and Drone 
+                        will auto-provision your environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="feature">
+            <div class="container">
+                <div class="feature-item center-text">
+                    <img src="./img/feature-3.png" alt="">
+                </div>
+                <div class="feature-item">
+                    <h2>Install Drone in Minutes</h2>
+                    <p>
+                        Download our official Docker image or build from source. 
+                        No need to talk with a sales person or request a trial license.
+                    </p>
+                    <a href="#" class="btn-xl bg-blue color-white">install drone</a>
+                    <a href="#" class="btn-xl color-black">free trial</a>
+                </div>
+            </div>
         </div>
     </body>
 </html>
