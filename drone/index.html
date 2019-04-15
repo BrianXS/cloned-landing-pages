@@ -23,6 +23,23 @@
         <script>
             hljs.initHighlightingOnLoad();
             hljs.initLineNumbersOnLoad();
+
+            function openCode(evt, codeName){
+                var i, tab, tabSwitches;
+
+                tab = document.getElementsByClassName('tab');
+                for(i = 0; i<tab.length; i++){
+                    tab[i].style.display = "none";
+                }
+
+                tabSwitches = document.getElementsByClassName("switch");
+                for(i = 0; i<tab.length; i++){
+                    tabSwitches[i].className = tabSwitches[i].className.replace("active-button", "");
+                }
+                
+                document.getElementById(codeName).style.display = "inline-block";
+                event.currentTarget.className += " active-button";
+            }
         </script>
     </head>
     <body>
@@ -62,14 +79,14 @@
                 <!--Introductory feature ends-->
 
                 <!--customers starts-->
-                <div id="customers">
+                <!--<div id="customers">
                     <ul>
-                        <li><object data="./img/Vmware-logo.svg" type="image/svg+xml"></object></li>
+                        <li><object data="./img/ebay-logo.svg" type="image/svg+xml"></object></li>
                         <li><object data="./img/Vmware-logo.svg" type="image/svg+xml"></object></li>
                         <li><object data="./img/Vmware-logo.svg" type="image/svg+xml"></object></li>
                         <li><object data="./img/Vmware-logo.svg" type="image/svg+xml"></object></li>
                     </ul>
-                </div>
+                </div>-->
                 <!--customers ends-->
             </div>
         </div>
@@ -136,6 +153,170 @@
                         Choose from thousands of Docker images and Drone 
                         will auto-provision your environment.
                     </p>
+                </div>
+            </div>
+        </div>
+        <div id="implementations">
+            <div class="container">
+                <div class="implementation-header">
+                    <h2>Create & Share Plugins</h2>
+                    <p>
+                        Drone uses containers to drop pre‑configured steps into your pipeline. 
+                        Choose from hundreds of existing plugins, or create your own.
+                    </p>
+                </div>
+                <div class="implementation-code">
+                    <div id="kubernetes" class="tab">
+                        <pre>
+                            <code class="yaml"> kind: pipeline
+    steps:
+    - name: test
+    image: node
+    commands:
+    - npm install
+    - npm test
+    - npm purge
+    services:
+    - name: database
+    - name: devtabase
+    image: mysql
+    ports:
+    - 3306
+    - 4000</code></pre>
+                    </div>
+                    <div id="aws" class="tab">
+                        <pre>
+                            <code class="yaml"> kind: pipeline
+
+    steps:
+    - name: test
+    image: golang
+    commands:
+    - go test
+    - go build
+    - npm purge
+
+    - name: publish
+    image: plugins/ecr
+    settings:
+        repo: 12345.ecr.amazonaws.com/alpine
+        tags: [ latest, 1.0, 1 ]</code></pre>
+                    </div>
+                    <div id="npm" class="tab">
+                        <pre>
+                            <code class="yaml"> kind: pipeline
+    steps:
+    - name: test
+    image: node
+    commands:
+    - npm install
+    - npm test
+    - npm purge
+    services:
+    - name: database
+    image: mysql
+    ports:
+    - 3306
+    when:
+        status: [ success, failure ]</code></pre>
+                    </div>
+                    <div id="github" class="tab">
+                        <pre>
+                            <code class="yaml"> kind: pipeline
+
+    steps:
+    - name: test
+    image: node
+    commands:
+    - npm install
+    - npm test
+    - npm run dist
+
+    - name: publish
+    image: plugins/gh-release
+    settings:
+        pages_directory: public/
+        pages_directory: private/</code></pre>
+                    </div>
+                    <div id="slack" class="tab">
+                        <pre>
+                            <code class="yaml"> kind: pipeline
+
+    steps:
+    - name: test
+    image: node
+    commands:
+    - npm install
+    - npm test
+
+    - name: notify
+    image: plugins/slack
+    settings:
+        channel: general
+    when:
+        status: [ success, failure ]</code></pre>
+                    </div>
+                    <div id="netlify" class="tab">
+                        <pre>
+                            <code class="yaml"> kind: pipeline
+
+    steps:
+    - name: test
+    image: node
+    commands:
+    - npm install
+    - npm test
+    - npm run dist
+
+    - name: publish
+    image: lucap/drone-netlify
+    settings:
+        site_id: 3970e0fe-8564-c5f8de49fb8b
+        site_name: synergy</code></pre>
+                    </div>
+                    <div id="copifly" class="tab">
+                        <pre>
+                            <code class="yaml"> kind: pipeline
+    
+    steps:
+    image: node
+    - name: test
+    - npm install
+    - npm test
+    commands:
+    - npm run dist
+
+    - name: publish
+    settings:
+        site_id: 3970e0fe-8564-c5f8de49fb8b
+        site_name: synergy
+    image: lucap/drone-netlify</code></pre>
+                    </div>
+                    <div class="tab-switch">
+                        <ul>
+                            <li>
+                                <button class="switch active-button" onclick="openCode(event, 'kubernetes')">kubernetes</button>
+                            </li>
+                            <li>
+                                <button class="switch" onclick="openCode(event, 'aws')">AWS</button>
+                            </li>
+                            <li>
+                                <button class="switch" onclick="openCode(event, 'npm')">npm</button>
+                            </li>
+                            <li>
+                                <button class="switch" onclick="openCode(event, 'github')">github</button>
+                            </li>
+                            <li>
+                                <button class="switch" onclick="openCode(event, 'slack')">slack</button>
+                            </li>
+                            <li>
+                                <button class="switch" onclick="openCode(event, 'netlify')">netlify</button>
+                            </li>
+                            <li>
+                                <button class="switch" onclick="openCode(event, 'copifly')">Markdown</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

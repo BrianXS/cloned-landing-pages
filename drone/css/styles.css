@@ -124,13 +124,22 @@ pre > code {
     text-align: center;
 }
 
+.hljs-attr {
+    color: white !important;
+}
+
+.hljs-string, .hljs-number {
+    color: #ed5267 !important;
+}
+
 /*==============================
 +[Introduction | #introduction]
 ===============================*/
 
 #introduction {
     padding-top: 35px;
-    background-image: url("../img/introduction-bg.svg")
+    background-image: url("../img/introduction-bg.svg");
+    background-size: 1920px;
 }
 
 #introduction .container {
@@ -276,14 +285,6 @@ nav a:last-child {
     display: inline-block;
 }
 
-.feature-item .hljs-attr {
-    color: white !important;
-}
-
-.feature-item .hljs-string, .hljs-number {
-    color: #ed5267 !important;
-}
-
 /*==============================
 +[Sub features | .sub-features]
 ===============================*/
@@ -308,3 +309,101 @@ nav a:last-child {
     font-size: 16px;
     line-height: 29px;
 }
+
+/*=======================================================
++[Language specific implementations | #implementations]
+=======================================================*/
+
+#implementations {
+    background-image: url("../img/implementation-bg.svg")
+}
+
+.implementation-header {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.implementation-header p {
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.implementation-code {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#implementations .implementation-code pre > code {
+    border-radius: 10px 0 0 10px;
+}
+
+.implementation-code div {
+    display: inline-block;
+}
+
+.implementation-code .tab {
+    display: none;
+    width: 69%;
+    vertical-align: top;
+}
+
+.implementation-code .tab pre {
+    margin-top: 0;
+}
+
+.implementation-code .tab pre code {
+    height: 420px;
+}
+
+.implementation-code .tab:first-child {
+    display: inline-block;
+}
+
+.implementation-code .tab-switch {
+    width: 30%;
+}
+
+.implementation-code .tab-switch ul {
+    padding: 0;
+    height: 420px;
+    background: #fdfeff;
+    margin-top: 18px;
+    margin-left: -6px;
+}
+
+.implementation-code .tab-switch ul li {
+    list-style: none;
+}
+
+.implementation-code .tab-switch ul li button {
+    width: 100%;
+    padding: 22.10px 0px;
+    background: transparent;
+    border: none;
+    font-weight: 400;
+    font-size: 20px;
+    outline: none;
+    color: var(--dark-blue);
+    text-transform: capitalize;
+}
+
+.implementation-code .tab-switch ul li:first-child button {
+    border-radius: 0px 10px 0px 0px;
+}
+
+.implementation-code .tab-switch ul li:last-child button {
+    border-radius: 0 0px 10px 0px;
+}
+
+.implementation-code .tab-switch ul li button:hover {
+    cursor: pointer;
+}
+
+
+.active-button {
+    background: var(--blue) !important;
+    color: white !important;
+    transition: 0.5s;
+}
+  
