@@ -492,3 +492,104 @@ nav a:last-child {
 #footer .container:last-child div ul {
     margin-left: 50px;
 }
+
+
+/*=======================================================
++[Media Queries]
+=======================================================*/
+
+@media (min-width: 320px) and (max-width:425px){
+    .container {
+        padding-top: 80px;
+        width: 90%;
+    }
+
+    /*==============================
+    +[Features | .feature]
+    ===============================*/
+
+    .feature {
+        display: block;
+    }
+
+    .feature .container {
+        display: block;
+    }
+
+    .feature .container .feature-item {
+        width: 100%;
+        float: none;
+    }
+
+    .feature-item a {
+        margin-bottom: 10px;
+        display: block;
+        text-align: center;
+    }
+
+    /*==============================
+    +[Sub features | .sub-features]
+    ===============================*/
+
+    .sub-features .container {
+        display: block;
+    }
+
+    .sub-features .container .sub-feature-item {
+        display: block;
+        width: 100%;
+    }
+
+    .sub-features .container .sub-feature-item p {
+        max-width: 95%;
+    }
+
+
+    /*==============================
+    +[Language in | .sub-features]
+    ===============================*/
+
+    .implementation-header {
+        width: 100%;
+    }
+
+    .implementation-header p {
+        width: 100%;
+        font-size: 16.5px;
+        line-height: 30px;
+    }
+
+    .implementation-code, .implementation-code .tab {
+        width: 100%;
+    }
+
+    #implementations .implementation-code pre > code {
+        border-radius: 10px;
+    }
+
+    .implementation-code .tab-switch {
+        width: 100%;
+    }
+
+    .implementation-code .tab-switch ul li {
+        display: inline;
+    }
+
+    /*=======================================================
+    +[Customer Quote & Footer | #footer]
+    =======================================================*/
+
+    #quote {
+        display: block;
+    }
+
+    #quote span {
+        text-align: left
+    }
+
+    #quote span, #quote p {
+        width: 100%;
+        display: block;
+    }
+    
+}
