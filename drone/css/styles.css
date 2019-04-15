@@ -13,8 +13,7 @@ Table of contents
 + feature | #feature
 + Sub features | #sub-features
 + Language especific implementations | #implementations
-+ Customer quote
-+ Footer
++ Customer Quote & Footer
 + Media Queries
 ===============================*/
 
@@ -94,6 +93,7 @@ pre > code {
     font-weight: 700;
     border-radius: 6px;
     text-transform: uppercase;
+    box-shadow: 0px 20px 40px 0px rgba(35,100,210,.2);
 }
 
 .btn-md {
@@ -102,6 +102,7 @@ pre > code {
     border-radius: 6px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    box-shadow: 0px 20px 40px 0px rgba(35,100,210,.2);
 }
 
 .btn-xl {
@@ -110,6 +111,7 @@ pre > code {
     border-radius: 6px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    box-shadow: 0px 20px 40px 0px rgba(35,100,210,.2);
 }
 
 .left-text {
@@ -354,6 +356,7 @@ nav a:last-child {
 
 .implementation-code .tab pre code {
     height: 420px;
+    box-shadow:  0px 20px 20px 0px rgba(35,100,210,.2);
 }
 
 .implementation-code .tab:first-child {
@@ -365,11 +368,13 @@ nav a:last-child {
 }
 
 .implementation-code .tab-switch ul {
+    border-radius: 0px 10px 10px 0px;
     padding: 0;
-    height: 420px;
+    height: 468.3px;
     background: #fdfeff;
     margin-top: 18px;
     margin-left: -6px;
+    box-shadow:  0px 20px 20px 0px rgba(35,100,210,.2);
 }
 
 .implementation-code .tab-switch ul li {
@@ -406,4 +411,84 @@ nav a:last-child {
     color: white !important;
     transition: 0.5s;
 }
-  
+
+/*=======================================================
++[Customer Quote & Footer | #footer]
+=======================================================*/
+
+#footer {
+    background-image: url("../img/footer-bg.svg");
+    background-size: 1920px;
+    padding-bottom: 50px;
+}
+
+#footer .container:last-child {
+    padding-top: 120px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#quote {
+    display: flex;
+    background: white;
+    padding: 50px;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 20px 20px 0 rgba(35,100,210,.29);
+}
+#quote span{
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center
+}
+
+#quote span img {
+    width: 40%;
+}
+
+#quote p{
+    width: 60%;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--black);
+    line-height: 40px;
+    display: inline-block;
+}
+
+#footer .container:last-child ul {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#footer .container:last-child ul li{
+    list-style: none;
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-size: 14.5px;
+}
+
+#footer .container:last-child ul:first-child {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#footer .container:last-child ul:first-child li:first-child img {
+    opacity: 0.5;
+}
+
+#footer .container:last-child ul li:first-child {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--black);
+    font-weight: 500;
+}
+
+#footer .container:last-child ul li a {
+    color: var(--gray);
+    font-size: 16px;
+}
+
+#footer .container:last-child div ul {
+    margin-left: 50px;
+}
