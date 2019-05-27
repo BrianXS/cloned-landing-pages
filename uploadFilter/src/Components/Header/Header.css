@@ -1,0 +1,14 @@
+.headerTitle {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.headerTitle h6 {
+    font-weight: 300;
+    color: rgba(15,50,86,0.7);
+    letter-spacing: 3px;
+}
+
+.headerTitle h2 {
+    font-weight: 700;
+}

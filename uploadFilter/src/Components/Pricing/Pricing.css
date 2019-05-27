@@ -1,0 +1,75 @@
+.pricing {
+    background: #f2f4f9;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+.pills { 
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.pills > div {
+    box-shadow: 0px 0px 10px 1px #0000002e;
+    cursor: pointer;
+    padding: 5px 2%;
+    border: 2px solid #ced4da;
+    font-weight: 700;
+    font-size: 13px;
+    width: 150px !important;
+    text-align: center;
+}
+
+.pills > div:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right: 0px !important;
+}
+
+.pills > div:last-child {
+    border-radius: 0px 4px 4px 0px;
+    border-left: 0px !important;
+}
+
+.pills > div.pillActive {
+    background: #0d60e8 !important;
+    color: white;
+    border-color: #0d60e8 !important;
+}
+
+@media (max-width:992px){
+    .pills {
+        width: 40%;
+    }
+
+    .pills > div {
+        padding: 5px 8.5%;
+        width: 150px !important;
+    }
+}
+
+@media (max-width:768px){
+    .pills {
+        width: 70%;
+    }
+
+    .pills > div {
+        padding: 5px 8%;
+        width: 150px !important;
+    }
+}
+
+
+@media (max-width:576px){
+    .pills {
+        width: 100%;
+    }
+
+    .pills > div {
+        padding: 5px 2%;
+        width: 150px !important;
+    }
+}
+
+

@@ -1,0 +1,40 @@
+.footer {
+    background: #343a40;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: rgba(236, 236, 236, 0.9);
+}
+
+.footer > .container > .row >  div:first-child > img {
+    width: 85%;
+    margin-bottom: 18px;
+}
+
+.footer > .container > .row >  div:first-child > p:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-top: 7px;
+}
+
+.footer ul li:first-child {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer ul li a {
+    color: rgba(236, 236, 236, 0.9);
+    text-decoration: none;
+}
+
+@media (max-width: 768px){
+    .footer ul {
+        padding: 0;
+    }
+}

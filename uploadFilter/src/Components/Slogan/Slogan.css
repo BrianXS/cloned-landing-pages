@@ -1,0 +1,32 @@
+.slogan {
+    padding-top: 60px;
+    padding-bottom: 220px;
+    color: white;
+    align-items: center;
+}
+
+.slogan > div > h1 {
+    font-size: 40.7px;
+    font-weight: 700;
+}
+
+
+.slogan > div > p {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+    width:82%;
+}
+
+.slogan img { width: 100%; }
+
+@media (max-width: 767px){
+
+    .slogan > div > p {
+        width: 100%;
+    }
+
+    .slogan > div:first-child {
+        margin-bottom: 40px;
+    }
+}

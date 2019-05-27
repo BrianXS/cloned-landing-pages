@@ -1,0 +1,92 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.navigation > div:nth-child(2) {
+    display: none;
+}
+
+.navigation > div:nth-child(2) > button{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer
+}
+
+.navigation > div:last-child > a {
+    vertical-align: top;
+    margin: 20px;
+    font-weight: 300;
+    color: white;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+.navigation > div:last-child > a:last-child {
+    margin-right: 0;
+}
+
+.navigation > div:last-child > a:first-child {
+    display: none;
+}
+
+.navigation a:hover {
+    text-decoration: none;
+}
+
+.navigation > div:first-child > a > img {
+    width: 200px;
+}
+
+.navigation > div:last-child > a:last-child {
+    border: 2px solid white; 
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+@media (max-width: 1000px){
+    .navigation > div:last-child {
+        display: none;
+    }
+
+    .navigation > div:nth-child(2) {
+        display: inline;
+    }
+
+    .overlay-menu {
+        display: initial !important;
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        background: #000000c4;
+        left: 0;
+        top: 0;
+    }
+
+    .navigation > div:last-child > a:first-child {
+        display: block;
+        margin-top: 10vh;
+        position: absolute;
+        right: 30px;
+        top: -8%;
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .navigation > div:last-child > a {
+        display: block;
+        max-width: 200px;
+        text-align: center;
+        margin: auto;
+        margin-top: 5vh;
+    }
+
+    .navigation > div:last-child > a:last-child {
+        margin-right: auto;
+    }
+}
+
