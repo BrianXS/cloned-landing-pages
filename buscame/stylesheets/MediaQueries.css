@@ -1,0 +1,101 @@
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    #phone-view > .container > .row > div:last-child {
+        padding-top: 0px;
+    }
+
+    #phone-view > .container > .row > div:last-child > .tab:first-child {
+        margin-top: 0px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    #banner > .container {
+        max-width: 900px;
+    }
+
+    #main-menu div a {
+        margin: 13px;
+    }
+
+    #banner > .container > .row > div:last-child{
+        text-align: right;
+    }
+
+    #phone-view > .container > .row {
+        align-items: center;
+    }
+
+    #join-us h1 {
+        font-size: 50px;
+    }
+
+    #join-us {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {
+
+    #banner > .container > .row > div:first-child > h1 {
+        font-size: 50px;
+    }
+
+    #main-menu div a:last-child {
+        border: none;
+    }
+
+    #first-tablet {
+        text-align: center;
+        margin-bottom: 50px;
+
+    }
+
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+
+    #first-tablet img{
+        width: 70%;
+    }
+
+    #join-us {
+        text-align: center;
+    }
+
+    #join-us > .container > .row > div:first-child {
+        margin-bottom: 50px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    #footer > .container > .row > div > ul {
+        padding: 16px;
+    }
+
+    #key-features {
+        text-align: center;
+    }
+
+    #key-features > .container > .row > div{
+        margin-bottom: 30px;
+    }
+
+    #key-features {
+        padding-bottom: 60px;
+    }
+}

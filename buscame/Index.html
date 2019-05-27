@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buscame</title>
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/MediaQueries.css">
+</head>
+<body>
+<div id="banner">
+    <div class="container">
+        <!-- start of the main menu -->
+        <nav id="main-menu">
+            <a href="./"><img src="./images/landing-page-resources/logo.png" alt=""></a>
+            <div class="d-none d-sm-none d-md-block">
+                <a href="#">Personal</a>
+                <a href="#">Vehiculos</a>
+                <a href="#">Configurador</a>
+                <a href="#">Contacto</a>
+                <a href="./login">Entrar</a>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+                <a onclick="openMenu()"><img class="three-line-menu" src="./images/landing-page-resources/menu.png" alt="menu"></a>
+            </div>
+        </nav>
+        <!-- end of the main menu -->
+        <!-- start of the slogan -->
+        <div class="row">
+            <div class="col-lg-7 col-md-7 col-sm-12">
+                <h1>Seguridad al alcance de tu mano.</h1>
+                <p>
+                    Brands love to email you. With margin, only
+                    apply filters to those incoming emails so you
+                    only get the ones you want in your inbox.
+                </p>
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-12">
+                <picture>
+                    <source srcset="./images/landing-page-resources/banner-responsive.png" media="(max-width:768px)">
+                    <img src="./images/landing-page-resources/banner-phone.png" alt="">
+                </picture>
+            </div>
+        </div>
+        <!-- end of the slogan-->
+    </div>
+
+    <div id="overlay-menu" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="#">How it Works</a>
+            <a href="#">Customers</a>
+            <a href="#">Manifesto</a>
+            <a href="#">About</a>
+            <a href="./login">Entrar</a>
+        </div>
+
+    </div>
+</div>
+<div id="customers">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <img src="https://www.seguridadoncor.com/wp-content/uploads/2018/08/logo-oncor@2.png" alt="Seguridad Oncors">
+                <img class="d-none d-xl-block" src="./images/landing-page-resources/mi-casa-segura-logo.png" alt="mi casa segura">
+                <img class="d-none" src="http://vatco.co/assets/images/logo.png" alt="vatco">
+                <img class="d-none d-md-block" src="https://www.lideresytalentos.com/wp-content/uploads/2018/12/logo-lideresytalentos.png" alt="lideres y talentos">
+                <img class="d-none d-lg-block" src="http://vatco.co/assets/images/logo.png" alt="vatco">
+                <img src="./images/landing-page-resources/mi-casa-segura-logo.png" alt="mi casa segura">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="key-features">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="./images/landing-page-resources/transparency.png" alt="">
+                <h5>Apagado Seguro</h5>
+                <p>En cualquier momento apaga tu vehiculo desde la comunidad de tu mano.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="./images/landing-page-resources/transparency.png" alt="">
+                <h5>Localizame</h5>
+                <p>Obten la ubicación tu vehiculo en tiempo real desde la palma de tu mano.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="./images/landing-page-resources/transparency.png" alt="">
+                <h5>parqueo seguro</h5>
+                <p>Parquea tu vehiculo en cualquier lugar y te notificaremos ante cualquier suceso.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="./images/landing-page-resources/transparency.png" alt="">
+                <h5>geocercas</h5>
+                <p>En cualquier momento apaga tu vehiculo desde la comunidad de tu mano.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="./images/landing-page-resources/transparency.png" alt="">
+                <h5>Búscame</h5>
+                <p>Obten la ubicación tu vehiculo en tiempo real desde la palma de tu mano.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="./images/landing-page-resources/transparency.png" alt="">
+                <h5>Y Mas Utilidades</h5>
+                <p>Parquea tu vehiculo en cualquier lugar y te notificaremos ante cualquier suceso.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="phone-view">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-6">
+                <div id="first-tablet">
+                    <picture>
+                        <source srcset="./images/landing-page-resources/mockup-phone-dark.png" media="(max-width:992px)">
+                        <img src="./images/landing-page-resources/tablet-mockup.png" alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="tab tab-active" onclick="tabletSlider(event, 'firstSlider')">
+                    <h5>Búscame</h5>
+                    <p>Obten la ubicación tu vehiculo en tiempo real desde la palma de tu mano.</p>
+                </div>
+                <div class="tab" onclick="tabletSlider(event, 'firstSlider')">
+                    <h5>Localizame</h5>
+                    <p>Obten la ubicación tu vehiculo en tiempo real desde la palma de tu mano.</p>
+                </div>
+                <div class="tab" onclick="tabletSlider(event, 'firstSlider')">
+                    <h5>Geocercas</h5>
+                    <p>En cualquier momento apaga tu vehiculo desde la comunidad de tu mano.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="customer-quote">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <p>
+                    Usar búscame nos ha ayudado, a monitorear nuestros conductores, <br class="d-none d-md-block">
+                    sus hábitos de conducción, a través del uso de la plataforma <br class="d-none d-md-block">
+                    hemos podido optimizar nuestras rutas.
+                </p>
+                <img src="./images/landing-page-resources/client-picture.jpeg" alt="">
+                <span>
+                    <p>Janne Doe</p>
+                    <p>Novaventas</p>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="join-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-8">
+                <h1>Nuestra seguridad es su confianza</h1>
+                <a href="#">Entrar</a>
+                <a href="#">Productos</a>
+            </div>
+            <div class="col-lg-5 col-md-4">
+                <picture>
+                    <source srcset="./images/landing-page-resources/join-us-image-md.png" media="(max-width: 992px)"/>
+                    <img src="./images/landing-page-resources/join-us-image.png" alt="">
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-4 col-12">
+                <img src="./images/landing-page-resources/logo-dark.png" alt="">
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-3 col-4">
+                <ul>
+                    <li>Búscame</li>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Precios</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-4">
+                <ul>
+                    <li>Soporte</li>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Privacidad</a></li>
+                    <li><a href="#">Terminos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script src="./javascripts/bootstrap.min.js"></script>
+<script src="./javascripts/app.js"></script>
+</html>
